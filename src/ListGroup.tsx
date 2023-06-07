@@ -1,8 +1,6 @@
-import { Fragment } from "react";
-
 function ListGroup () {
     return (
-        <Fragment>
+        <>
             <div className="max-w-lg mx-auto">
                 <div className="bg-white rounded-lg border border-gray-200 w-48 text-gray-900 text-sm font-medium">
                     <a href="#" aria-current="true" className="block px-4 py-2 border-b border-gray-200 w-full rounded-t-lg bg-blue-700 text-white cursor-pointer">
@@ -22,7 +20,7 @@ function ListGroup () {
             <div>
                 other content
             </div>
-        </Fragment>
+        </>
     )    
 }
 
