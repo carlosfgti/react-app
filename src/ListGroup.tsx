@@ -1,3 +1,5 @@
+import { MouseEvent } from "react";
+
 function ListGroup () {
     const items = [
         'Home',
@@ -8,6 +10,11 @@ function ListGroup () {
 
     const otherList: string[] = [];
 
+    const handleClick = (e: React.MouseEvent, item: string) => {
+        e.preventDefault();
+        console.log(item);
+    }
+
     return (
         <>
             <div className="max-w-lg mx-auto">
@@ -15,10 +22,7 @@ function ListGroup () {
                     {items.map((item, index) => (
                         <a href=""
                             key={index}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                console.log(item);
-                            }}
+                            onClick={(event) => handleClick(event, item)}
                             className="block px-4 py-2 border-b border-gray-200 w-full rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 cursor-pointer">{item}</a>
                     ))}
                 </div>    
