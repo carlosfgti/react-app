@@ -9,6 +9,7 @@ function ListGroup () {
     ];
 
     const otherList: string[] = [];
+    let selectedIndex = -1;
 
     const handleClick = (e: React.MouseEvent, item: string) => {
         e.preventDefault();
@@ -23,7 +24,23 @@ function ListGroup () {
                         <a href=""
                             key={index}
                             onClick={(event) => handleClick(event, item)}
-                            className="block px-4 py-2 border-b border-gray-200 w-full rounded-b-lg hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:text-blue-700 cursor-pointer">{item}</a>
+                            className={
+                                [
+                                    'block',
+                                    'px-4',
+                                    'py-2',
+                                    'border-b',
+                                    'border-gray-200',
+                                    'w-full',
+                                    'rounded-b-lg',
+                                    'hover:bg-gray-100',
+                                    'hover:text-blue-700',
+                                    'focus:outline-none',
+                                    'focus:ring-2',
+                                    'focus:ring-blue-700',
+                                    'focus:text-blue-700 cursor-pointer',
+                                ].join(' ')
+                            }>{item}</a>
                     ))}
                 </div>    
             </div>
