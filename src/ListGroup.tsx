@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 function ListGroup () {
     const items = [
@@ -9,11 +9,14 @@ function ListGroup () {
     ];
 
     const otherList: string[] = [];
-    let selectedIndex = -1;
+    // let selectedItem = '';
+    const [selectedItem, setSelectedItem] = useState('');
+    // arr[0] // variable (selectedItem)
+    // arr[1] // updater function
 
     const handleClick = (e: React.MouseEvent, item: string) => {
         e.preventDefault();
-        console.log(item);
+        setSelectedItem(item);
     }
 
     return (
@@ -39,6 +42,7 @@ function ListGroup () {
                                     'focus:ring-2',
                                     'focus:ring-blue-700',
                                     'focus:text-blue-700 cursor-pointer',
+                                    selectedItem === item ? 'bg-blue-300' : '',
                                 ].join(' ')
                             }>{item}</a>
                     ))}
