@@ -5,7 +5,7 @@ interface Props {
 }
 
 function ListGroup (props: Props) {
-    const items = props.items;
+    const { items } = props;
 
     const otherList: string[] = [];
     // let selectedItem = '';
