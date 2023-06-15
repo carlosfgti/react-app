@@ -1,7 +1,14 @@
 import ListGroup from "./ListGroup";
 
 function App() {
-  return <div><ListGroup></ListGroup></div>
+  const items = [
+      'Home',
+      'Courses',
+      'Contact',
+      'Login/Register'
+  ];
+
+  return <div><ListGroup items={items}></ListGroup></div>
 }
 
 export default App;

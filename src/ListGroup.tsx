@@ -1,12 +1,11 @@
 import { MouseEvent, useState } from "react";
 
-function ListGroup () {
-    const items = [
-        'Home',
-        'Courses',
-        'Contact',
-        'Login/Register'
-    ];
+interface Props {
+    items: string[];
+}
+
+function ListGroup (props: Props) {
+    const items = props.items;
 
     const otherList: string[] = [];
     // let selectedItem = '';
