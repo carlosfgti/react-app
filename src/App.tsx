@@ -8,7 +8,9 @@ function App() {
       'Login/Register'
   ];
 
-  return <div><ListGroup items={items}></ListGroup></div>
+  const onClickExample = (value: string) => console.log(value);
+
+  return <div><ListGroup items={items} onClickExample={onClickExample}></ListGroup></div>
 }
 
 export default App;

@@ -2,6 +2,7 @@ import { MouseEvent, useState } from "react";
 
 interface Props {
     items: string[];
+    onClickExample: (value: string) => void;
 }
 
 function ListGroup (props: Props) {
@@ -16,6 +17,8 @@ function ListGroup (props: Props) {
     const handleClick = (e: React.MouseEvent, item: string) => {
         e.preventDefault();
         setSelectedItem(item);
+
+        props.onClickExample('value')
     }
 
     return (
