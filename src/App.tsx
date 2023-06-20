@@ -1,3 +1,4 @@
+import Alert from "./Alert";
 import ListGroup from "./ListGroup";
 
 function App() {
@@ -10,7 +11,12 @@ function App() {
 
   const onClickExample = (value: string) => console.log(value);
 
-  return <div><ListGroup items={items} onClickExample={onClickExample}></ListGroup></div>
+  return <div>
+    <Alert>
+      <p>Text with <strong>strong</strong></p>
+    </Alert>
+    <ListGroup items={items} onClickExample={onClickExample}></ListGroup>
+  </div>
 }
 
 export default App;
