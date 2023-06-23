@@ -1,5 +1,5 @@
-import Alert from "./Alert";
-import ListGroup from "./ListGroup";
+import Alert from "./components/Alert";
+import ListGroup from "./components/ListGroup/ListGroup";
 
 function App() {
   const items = [
