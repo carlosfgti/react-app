@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from "react";
-import './ListGroup.css'
+import styles from './ListGroup.module.css'
 
 interface Props {
     items: string[];
@@ -24,7 +24,8 @@ function ListGroup (props: Props) {
 
     return (
         <>
-            <div className="max-w-lg mx-auto custom">
+            {/* <div className={["max-w-lg", "mx-auto", styles['customClass']].join(" ")}> */}
+            <div className={["max-w-lg", "mx-auto", styles.customClass].join(" ")}>
                 <div className="bg-white rounded-lg border border-gray-200 w-48 text-gray-900 text-sm font-medium">
                     {items.map((item, index) => (
                         <a href=""
