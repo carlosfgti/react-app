@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from "react";
 import styles from './ListGroup.module.css'
+import { FaAtlassian } from "react-icons/fa6";
 
 interface Props {
     items: string[];
@@ -24,7 +25,9 @@ function ListGroup (props: Props) {
 
     return (
         <>
-            <div style={{ backgroundColor: '#000000', color: '#ffffff' }}>Oi</div>
+            <div style={{ backgroundColor: '#000000', color: '#ffffff', padding: '10px' }}>
+                <FaAtlassian/>
+            </div>
             {/* <div className={["max-w-lg", "mx-auto", styles['customClass']].join(" ")}> */}
             <div className={["max-w-lg", "mx-auto", styles.customClass].join(" ")}>
                 <div className="bg-white rounded-lg border border-gray-200 w-48 text-gray-900 text-sm font-medium">
